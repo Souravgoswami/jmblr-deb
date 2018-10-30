@@ -1,0 +1,8 @@
+Package: jmblr
+Version: 1.1
+Section: misc
+Priority: optional
+Architecture: all
+Depends: ruby, ncurses-base, ncurses-bin
+Maintainer: Sourav Goswami <souravgoswami@protonmail.com>
+Description: Solve jumbled up words on the terminal.
