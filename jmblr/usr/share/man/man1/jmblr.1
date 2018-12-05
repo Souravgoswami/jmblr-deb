@@ -1,11 +1,69 @@
-.TH jmblr "30th Oct 2018" "1.1" "jmblr man page"
-.SH NAME
-jmblr \- Solve Jumble Words
-.SH SYNONPSIS
-jmblr, the program takes user inputs, arranges that by words, and searches the dictionary for matches.
-.SH OPTIONS
---help   -h	a help page.
+.TH jmblr 1 "DEC 6 2018" "1.3" "jmblr man page"
 
---update -u	update the dictionary database.
+.SH NAME
+Jumbler! Also known as jmblr...
+
+SH SYNOPSIS
+I am a small program to whom you give jumbled up word(s), and get matching words.
+
+
+.SH OPTIONS
+.B --help		-h
+
+	Show a friendly help with lots of details.
+
+.B --no-colour	-nc
+
+	Add no colours to the output.
+
+.B --update		-u
+
+	Download missing dictionary from the internet (update if possible).
+
+.B --words=		-w=
+
+	Specify the wordlist that will be used for searching (should be a plain text ASCII format).
+
+.SH Examples:
+.SH 1. echo altering bob voles ybur | jmblr
+
+.SH 2. jmblr triangel bob loevs ruyb
+
+.SH 3. cat a_file.txt | jmblr
+
+.SH 4. All of the above with --no-colour or -nc to eliminate colours.
+
+.SH 5. All the above exampleswith --words=path_to_wordlist or -w=path_to_wordlist
+
+
+
+.SH Example 1 (assuming you have a british wordlist in /usr/share/dict/):
+
+				echo triangle bob | jmblr --words=/usr/share/dict/british
+
+
+.SH Example 2 (assuming that you have downloaded a wordlist in txt format):
+
+				echo triagnle | jmblr -w=/home/user/Downloads/worlist.txt
+
+
+
+.SH Useful keys while live searching (running jmblr without an option or redirection):
+.SH backspace
+		Delete the last character.
+
+.SH ctrl + d/ctrl + b
+		Clear everything you typed.
+
+.SH ctrl + x/ctrl+q
+		Exit.
+
+.SH ctrl + r
+		Refresh the screen.
+
+.SH ctrl + c
+		Toggle colours.
+
+
 .SH AUTHOR
-Sourav Goswami (souravgoswami@protonmail.com)
+	Sourav Goswami <souravgoswami@protonmail.com>
